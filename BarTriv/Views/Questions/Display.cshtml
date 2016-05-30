@@ -1,0 +1,20 @@
+﻿@model BarTriv.Models.Question
+
+
+@{
+    ViewBag.Title = "Trivia";
+}
+
+
+
+<h3>BarTrivia</h3>
+
+<h1>Q: @Html.DisplayFor(model => model.Question1)</h1> 
+
+<h3>A: @Html.DisplayFor(model => model.AnswerA)</h3>
+<h3>B: @Html.DisplayFor(model => model.AnswerB)</h3>
+<h3>C: @Html.DisplayFor(model => model.AnswerC)</h3>
+<h3>D: @Html.DisplayFor(model => model.AnswerD)</h3>
+
+
+<script src="~/Scripts/questionview.js"></script>

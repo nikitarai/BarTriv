@@ -1,0 +1,48 @@
+﻿body {
+}
+button{
+    align-content:center;
+    background-color:orangered;
+    min-width:100%;
+    
+}
+#q{
+    font-size:60px;
+    text-align:center;
+}
+.answer{
+    width:100%;
+    
+}
+h3{
+    font-size:30px;
+}
+
+label {
+  width: 98%;
+  border-radius: 3px;
+  border: 1px solid #D1D3D4
+}
+
+input[type=radio]{
+    display:none;
+    margin:10px;
+}
+
+input[type=radio] + label{
+    display:inline-block;
+    margin:-2px;
+    padding: 4px 12px;
+    background-color: orangered;
+    border-color: #ddd;
+    min-height:50px;
+    font-size:30px;
+    text-align:center;
+    vertical-align: middle;
+}
+
+input[type=radio]:checked+label{
+    background-color:#ff1d01;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.75) inset;
+}
+

@@ -1,0 +1,85 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Play</title>
+</head>
+<body>
+    <div> 
+        @model BarTriv.Models.Question
+
+
+        @{
+            ViewBag.Title = "Trivia";
+        }
+
+
+
+        <h3>BarTrivia</h3> 
+       
+        @*Add Timer and Round counter*@
+        
+        @{
+            //var chosen = "";
+            int roundScore = 0;
+        }
+
+        <h1 id="q">Q: @Html.DisplayFor(model => model.Question1)</h1>
+        <form id="qa">              
+                <input type="radio" name="qAnswers" id="a" value="@Html.DisplayFor(model => model.AnswerA)" class="qAnswers" />
+                <label for="a">@Html.DisplayFor(model => model.AnswerA)</label><br />
+                
+                <input type="radio" name="qAnswers" id="b" value="@Html.DisplayFor(model => model.AnswerB)" class="qAnswers"/>
+                <label for="b">@Html.DisplayFor(model => model.AnswerB)</label><br />
+                
+                <input type="radio" name="qAnswers" id="c" value="@Html.DisplayFor(model => model.AnswerC)" class="qAnswers"/>
+                <label for="c">@Html.DisplayFor(model => model.AnswerC)</label><br />
+                
+                <input type="radio" name="qAnswers" id="d" value="@Html.DisplayFor(model => model.AnswerD)" class="qAnswers"/>
+                <label for="d">@Html.DisplayFor(model => model.AnswerD)</label><br />
+        </form>
+        
+     
+                  @*if (selected == @Html.DisplayFor(model => model.CorrectAnswer))
+                  {
+                      int questionPoints = @Html.DisplayFor(model => model.Points);
+                      roundScore = +questionPoints;
+                  }*@
+
+              
+
+
+        @*<div class="answer"><button onclick="chosen=model.AnswerA.innerhtml"><h3 id="a">@Html.DisplayFor(model => model.AnswerA)</h3></button></div>
+        <div class="answer"><button onclick="chosen=model.AnswerB.innerhtml"><h3 id="b">@Html.DisplayFor(model => model.AnswerB)</h3></button></div>
+        <div class="answer"><button onclick="chosen=model.AnswerC.innerhtml"><h3 id="c">@Html.DisplayFor(model => model.AnswerC)</h3></button></div>
+        <div class="answer"><button onclick="chosen=model.AnswerD.innerhtml"><h3 id="d">@Html.DisplayFor(model => model.AnswerD)</h3></button></div>*@
+
+       
+
+      @*@{ 
+          if (chosen==Model.CorrectAnswer)
+          {
+              int questionPoints = Model.Points;
+              roundScore = +questionPoints;
+
+          }
+      }*@
+
+                @*Add in Hints and use jquery to show them at different times*@
+
+                <p>Hint 1: @Html.DisplayFor(model => model.Hint1)</p>
+                <p>Hint 2: @Html.DisplayFor(model => model.Hint2)</p>
+                <p>Hint 3: @Html.DisplayFor(model => model.Hint3)</p>
+
+                <script src="~/Scripts/PlayJ.js"></script>
+                <script src="~/Scripts/questionview.js"></script>
+                <link href="~/Content/PlayStyle.css" rel="stylesheet" />
+            </div>
+</body>
+</html>
